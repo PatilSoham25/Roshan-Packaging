@@ -935,7 +935,7 @@ usage_image: "Final/PACKAGING/ALUMINIUM FOIL/USAGE.jpg",
     name: "Tesa 4657 00 - 01",
     category: "Tesa",
     type: "Tesa 4657 00 - 01",
-    image: "Final/TESA/4657 00 - 011.jpg",
+    image: "/Final/TESA/4657 00 - 01/1.jpg",
     usage_image: "Final/TESA/4657 00 - 01/USAGE.jpg",
     description: "A premium acrylic-coated cloth tape with high-quality natural rubber adhesive designed for heavy-duty industrial applications requiring durability, abrasion resistance, and strong adhesion.",
     features: [
