@@ -1196,11 +1196,12 @@ body {
 
 .product-grid-home {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  /* padding: 0px 100px; */
 }
 
 .view-all-btn-container {
