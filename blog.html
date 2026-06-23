@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Roshan Packaging</title>
+  <title>Blog - Roshan Packaging</title>
   <link rel="icon" type="image/x-icon" href="videos/logo.jpg">
   <script src="https://unpkg.com/feather-icons"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -16,7 +16,7 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 />
   <link rel="stylesheet" href="navbar.css">
-  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="blog.css">
   <!-- Correct Font Awesome CDN -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -166,180 +166,100 @@
     </div>
   </nav>
 
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
+    <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
 
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-    hamburger.classList.toggle('active');
-  });
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        hamburger.classList.toggle('active');
+    });
 
-  const productToggle = document.getElementById('productToggle');
-  const dropdown = productToggle.parentElement;
+    const productToggle = document.getElementById('productToggle');
+    const dropdown = productToggle.parentElement;
 
-  // ONLY Product toggle should open dropdown in mobile
-  productToggle.addEventListener('click', (e) => {
-    if (window.innerWidth <= 768) {
-      e.preventDefault();
-      dropdown.classList.toggle('open');
+    // ONLY Product toggle should open dropdown in mobile
+    productToggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+        e.preventDefault();
+        dropdown.classList.toggle('open');
+        }
+    });
+
+    // ❌ DO NOT block category links
+    // So REMOVE this old preventDefault logic completely
+    </script>
+    <script>
+    function removeMobileArrows() {
+        if (window.innerWidth <= 768) {
+        document.querySelectorAll('.sub-dropdown > a').forEach(link => {
+            link.innerHTML = link.innerHTML.replace(' ▸', '');
+        });
+        }
     }
-  });
 
-  // ❌ DO NOT block category links
-  // So REMOVE this old preventDefault logic completely
-</script>
-<script>
-  function removeMobileArrows() {
-    if (window.innerWidth <= 768) {
-      document.querySelectorAll('.sub-dropdown > a').forEach(link => {
-        link.innerHTML = link.innerHTML.replace(' ▸', '');
-      });
-    }
-  }
+    // Run on load
+    removeMobileArrows();
 
-  // Run on load
-  removeMobileArrows();
+    // Run on resize (orientation change etc.)
+    window.addEventListener('resize', removeMobileArrows);
+    </script>
 
-  // Run on resize (orientation change etc.)
-  window.addEventListener('resize', removeMobileArrows);
-</script>
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="blog-content">
+        <h1>Our Blogs</h1>
+        <p>Explore industry insights, product guides, and expert tips on adhesive tapes, packaging solutions, and industrial applications.</p>
+        <!-- <p></p> -->
+        </div>
+    </section>
 
-
-
-  <!-- HERO SECTION -->
-  <section class="about-hero-about">
-    <div class="hero-overlay-about">
-      <div class="hero-text-about">
-        <h4>ABOUT US</h4>
-        <h1>Experience <br><span>Speaks for Itself!</span></h1>
-        <p>
-          At Roshan Packaging, we believe every bond tells a story — one of trust, strength, and reliability.
-        </p>
-        <a href="products.html" class="btn-primary">Our Products</a>
+    <!-- Bolg contect -->
+    <section class="articles-section">
+    <div class="card-container">
+      
+      <div class="card">
+        <div class="card-header">
+          <div class="logo">
+            <div class="logo">
+                <img src="/videos/logo.jpg" alt="Company Logo" class="company-logo-img">
+            </div>
+          </div>
+          <h2>Best Tesa Tapes for Automotive Wire Harness Wrapping</h2>
+          <div class="header-image-wrapper shape-circle">
+            <img src="/images/Automotive Wire main image.jpeg" alt="article-1 image">
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>Best Tesa Tapes for Automotive Wire Harness Wrapping</h3>
+          <p>Tesa automotive harness tapes protect vehicle wiring from heat, abrasion, vibration, and chemicals while ensuring durability, noise reduction, and OEM compliance.</p>
+          <a href="blog-articles.html?id=article-1" class="read-more" data-article="Sewage Treatment">Read Article &rarr;</a>
+        </div>
       </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="logo">
+            <div class="logo">
+                <img src="/videos/logo.jpg" alt="Company Logo" class="company-logo-img">
+            </div>
+          </div>
+          <div class="header-content-right">
+            <h2>How to Choose the Right Adhesive Tape?</h2>
+          </div>
+          <div class="header-image-wrapper shape-circle">
+            <img src="/images/Tesa-Tape-Brand.jpeg" alt="Article-2 image">
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>How to Choose the Right Adhesive Tape?</h3>
+          <p>Industrial adhesive tapes enhance manufacturing efficiency by replacing traditional fasteners, offering reliable bonding solutions across automotive, electronics, packaging, and industrial applications.</p>
+          <a href="blog-articles.html?id=article-2" class="read-more" data-article="Effluent Treatment">Read Article &rarr;</a>
+        </div>
+      </div>
+
     </div>
   </section>
-
-
-
-  <!-- About Section -->
-  <section class="about-section">
-    <div class="about-container">
-      <div class="about-text">
-        <h2>About Roshan Packaging</h2>
-        <p>
-
-          Established in 2000 by Mr. Roshan Shah, Roshan Packaging is a leading manufacturer, converter, and die-cut
-          solutions provider based in Pune, Maharashtra, India. With over two decades of industry experience, we have
-          built a strong presence across diverse sectors including solar, paper, packaging, printing, automotive, white
-          goods, label, and wire harness industries.
-
-          <br>At Roshan Packaging, we are committed to delivering high-performance adhesive tapes and die-cut solutions
-          that meet the precise requirements of industrial applications. Our products are engineered for superior
-          adhesion, durability, and consistency — ensuring optimal performance under demanding operational conditions.
-
-          <br>Driven by quality, reliability, and continuous innovation, we employ advanced manufacturing processes and
-          stringent quality control systems to meet global standards and customer expectations.
-
-          Over the years, Roshan Packaging has become a trusted partner to businesses across India by offering
-          customized solutions, timely delivery, and dedicated technical support. Our focus remains on building
-          long-term relationships grounded in trust, performance, and value.
-        </p>
-      </div>
-      <div class="about-image">
-        <img src="images/about2.jpg" alt="Our Team">
-      </div>
-    </div>
-  </section>
-
-  <!-- Mission Vission Section -->
-
-  <div class="mission-vision-container">
-    <h1 class="subtitle">Our Mission, Vision And Value</h1>
-    <!-- <p class="title">At Suthar Ramchandra Jaiswal Tech Pvt. Ltd., we blend traditional craftsmanship with modern innovation to deliver high-precision, reliable machines.</p> -->
-
-    <div class="content">
-      <div class="card mission">
-        <h2><i class="fa-solid fa-bullseye"></i> Our Mission</h2>
-        <p>At Roshan Packaging, our mission is to provide high-quality, reliable, and customized adhesive solutions that
-          empower our customers to enhance their productivity and efficiency. We are dedicated to delivering consistent
-          performance, timely service, and innovative products through advanced manufacturing practices —
-          building long-term partnerships based on trust, transparency, and mutual growth.
-        </p>
-      </div>
-
-      <div class="card vision">
-        <h2> <i class="fa-solid fa-eye"></i>Our Vision</h2>
-        <p>
-          To be the preferred adhesive solutions partner by empowering our customers with reliable, innovative, and
-          high-performance self-adhesive
-          tapes that add value to their business and help them achieve operational excellence.
-        </p>
-      </div>
-
-      <div class="card vision">
-        <h2> <i class="fa-solid fa-handshake"></i>Our Value</h2>
-        <p>
-          At Roshan Packaging, we deliver reliable, high-quality adhesive tape solutions designed for strength, consistency, and performance. We are driven by quality, trust, and long-term customer partnerships
-        </p>
-      </div>
-
-    </div>
-  </div>
-  <script>
-    //Script
-    // mission Vision Section
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.from(".vision", {
-      scrollTrigger: {
-        trigger: ".vision",
-        start: "top 80%",
-        toggleActions: "play none none none"
-      },
-      opacity: 0,
-      x: -100,
-      duration: 1
-    });
-
-    gsap.from(".image", {
-      scrollTrigger: {
-        trigger: ".image",
-        start: "top 80%",
-        toggleActions: "play none none none"
-      },
-      scale: 0.8,
-      opacity: 0,
-      duration: 1
-    });
-
-    gsap.from(".mission", {
-      scrollTrigger: {
-        trigger: ".mission",
-        start: "top 80%",
-        toggleActions: "play none none none"
-      },
-      opacity: 0,
-      x: 100,
-      duration: 1
-    });
-  </script>
-
-
-
-
-  <!-- ABOUT PAGE CTA SECTION -->
-  <section class="about-cta">
-    <div class="cta-overlay"></div>
-    <div class="cta-content">
-      <h2>Let’s Build Strong Bonds Together</h2>
-      <p>From industrial packaging to everyday use — Roshan Packaging delivers adhesive solutions you can trust.</p>
-      <button class="btn-primary">Get in Touch</button>
-    </div>
-  </section>
-
 
   <!-- Footer  -->
 
@@ -372,6 +292,7 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
+      
       <!-- Column 4: Products -->
       <div class="footer-links">
         <h4>Our Products</h4>
@@ -392,10 +313,6 @@
         <p><strong>Phone:</strong> +91 9370099995 </p>
         <p><strong>Phone:</strong> +91 7385190995</p>
       </div>
-
-
-
-
 
     </div>
 

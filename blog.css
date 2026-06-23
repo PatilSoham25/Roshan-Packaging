@@ -6,17 +6,20 @@
 }
 
 body {
-     font-family: "Saira", sans-serif; 
+    font-family: "Saira", sans-serif; 
     color: #333;
     background-color: #f5f5f5;
-}/* NAVBAR BASE */
+
+}
+
+/* NAVBAR BASE */
 /* Navbar */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(179, 0, 0, 0.9);
+  background-color: rgba(179, 0, 0, 0.9);
   padding: 1rem 3rem;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   z-index: 1000;
@@ -409,641 +412,467 @@ body {
   }
 }
 
-
-
-
-
-/* HERO SECTION */
-.about-hero-about {
+/* ===================================== */
+/* blog HERO SECTION */
+.blog-hero {
   position: relative;
   height: 90vh;
-  background: url('images/aboutHero.jpg') no-repeat center center/cover;
+  background: url('images/Printing.jpeg') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Red angled overlay */
-.about-hero-about::before {
+.blog-hero::before {
   content: "";
   position: absolute;
   left: 0;
   top: 0;
   width: 65%;
   height: 100%;
-    background: linear-gradient(
+  background: linear-gradient(
     135deg, 
-    rgba(179, 0, 0, 0.6) 60%,  /* 0.5 = 50% transparency */
+    rgba(179, 0, 0, 0.6) 60%, 
     rgba(179, 0, 0, 0) 61%
   );
   z-index: 1;
 }
 
-/* Overlay content container */
-.hero-overlay-about {
+/* Hero content */
+
+.blog-hero .blog-content {
   position: relative;
   z-index: 2;
-  color: white;
+  color: #fff;
   max-width: 600px;
   margin-left: 5%;
 }
 
-/* Text styling */
-.hero-text-about h4 {
-  font-size: 1rem;
-  letter-spacing: 2px;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  color: #ffb3b3;
-}
-
-.hero-text-about h1 {
+.blog-hero h1 {
   font-size: 3rem;
   line-height: 1.2;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.hero-text-about h1 span {
-  color: #fff;
-  font-weight: 800;
-}
-
-.hero-text-about p {
+.blog-hero p {
   font-size: 1.1rem;
-  max-width: 400px;
-  margin-bottom: 2rem;
+  max-width: 450px;
+  color: #ffcccc;
 }
 
-/* Button */
-.btn-primary {
-  background-color: #fff;
-  color: #b30000;
-  text-decoration: none;
-  padding: 0.8rem 1.8rem;
-  border-radius: 30px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #e07b17;
-  color: #fff;
-}
-
-/* =============================
-      RESPONSIVE DESIGN
-============================= */
-
-/* Extra small devices (phones, portrait) */
+/* =============================== */
+/* 📱 Extra small devices (phones) */
+/* =============================== */
 @media (max-width: 320px) {
-  .about-hero-about {
+  .blog-hero {
     height: 70vh;
-    justify-content: center;
     text-align: center;
   }
-  .about-hero-about::before {
-    width: 100%;
-    background: rgba(179, 0, 0, 0.85);
-    clip-path: none;
-  }
-  .hero-overlay-about {
-    margin: 0;
+
+  .blog-hero .blog-content {
+    margin: 0 auto;
     padding: 0 1rem;
   }
-  .hero-text-about h1 {
+
+  .blog-hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .blog-hero p {
+    font-size: 0.85rem;
+  }
+}
+
+/* =============================== */
+/* 📱 Small devices (phones) */
+/* =============================== */
+@media (max-width: 480px) {
+  .blog-hero {
+    height: 70vh;
+    text-align: center;
+  }
+
+  .blog-hero .blog-content {
+    margin: 0 auto;
+    padding: 0 1.2rem;
+  }
+
+  .blog-hero h1 {
     font-size: 1.8rem;
   }
-  .hero-text-about p {
-    font-size: 0.9rem;
-    max-width: 100%;
-  }
-  .btn-primary {
-    padding: 0.6rem 1.2rem;
+
+  .blog-hero p {
     font-size: 0.9rem;
   }
 }
 
-/* Small devices (phones) */
-@media (max-width: 480px) {
-  .hero-text-about h1 {
+/* =============================== */
+/* 📱 Medium devices (phones) */
+/* =============================== */
+@media (max-width: 576px) {
+  .blog-hero {
+    height: 65vh;
+  }
+
+  .blog-hero h1 {
     font-size: 2rem;
   }
-  .hero-text-about p {
-    font-size: 1rem;
+
+  .blog-hero p {
+    font-size: 0.95rem;
   }
 }
 
-/* Medium devices (phones) */
-@media (max-width: 576px) {
-  .about-hero-about {
-    height: 70vh;
-  }
-  .hero-text-about h1 {
-    font-size: 2.2rem;
-  }
-  .hero-text-about p {
-    font-size: 1rem;
-  }
-}
-
-/* Large phones */
+/* =============================== */
+/* 📱 Large phones */
+/* =============================== */
 @media (max-width: 768px) {
-  .about-hero-about {
-    height: 70vh;
+  .blog-hero {
+    height: 60vh;
     justify-content: center;
     text-align: center;
   }
-  .about-hero-about::before {
+
+  .blog-hero::before {
     width: 100%;
     /* background: rgba(179, 0, 0, 0.85); */
     clip-path: none;
   }
-  .hero-overlay-about {
+
+  .blog-hero .blog-content {
     margin: 0;
     padding: 0 1.5rem;
   }
-  .hero-text-about h1 {
-    font-size: 2.4rem;
+
+  .blog-hero h1 {
+    font-size: 2.2rem;
   }
-  .hero-text-about p {
+
+  .blog-hero p {
     font-size: 1rem;
   }
 }
 
-/* Tablets (portrait + landscape) */
+/* =============================== */
+/* 💻 Tablets (portrait + landscape) */
+/* =============================== */
 @media (max-width: 992px) {
-  .about-hero-about {
-    height: 80vh;
-  }
-  .hero-text-about h1 {
-    font-size: 2.8rem;
-  }
-  .hero-text-about p {
-    font-size: 1.05rem;
-  }
-}
-
-/* Medium desktops */
-@media screen and (max-width: 1152px) {
-  .about-hero-about {
-    height: 85vh;
-  }
-  .hero-text-about h1 {
-    font-size: 2.9rem;
-  }
-}
-
-/* Large desktops */
-@media screen and (max-width: 1440px) {
-  .about-hero-about {
-    height: 90vh;
-  }
-}
-
-/* ABOUT PAGE */
-.about-section {
-  padding: 100px 20px;
-  background: #fafafa;
-}
-.about-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  max-width: 1200px;
-  margin: auto;
-}
-.about-text {
-  flex: 1;
-  min-width: 300px;
-}
-.about-text h2 {
-  color: #000;
-  font-size: 40px ;
-  margin-bottom: 20px;
-}
-.about-text p {
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 15px;
-}
-.about-image img {
-  width: 400px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-/* ------------------------------ */
-/* ✅ RESPONSIVE DESIGN */
-/* ------------------------------ */
-
-/* Tablets and small laptops */
-@media (max-width: 1024px) {
-  .about-section {
-    padding: 80px 30px;
-  }
-
-  .about-text h2 {
-    font-size: 34px;
-  }
-
-  .about-text p {
-    font-size: 15px;
-  }
-
-  .about-image img {
-    max-width: 380px;
-  }
-}
-
-/* Mobile L (large phones, ~425–768px) */
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column-reverse;
+  .blog-hero {
+    height: 70vh;
+    justify-content: center;
     text-align: center;
   }
 
-  .about-text {
-    max-width: 90%;
+  .blog-hero h1 {
+    font-size: 2.4rem;
   }
 
-  .about-text h2 {
-    font-size: 30px;
-  }
-
-  .about-text p {
-    font-size: 15px;
-    text-align: left;
-  }
-
-  .about-image img {
-    max-width: 350px;
+  .blog-hero p {
+    font-size: 1rem;
+    color: white;
   }
 }
 
-/* Mobile M (medium phones, ~375–424px) */
-@media (max-width: 480px) {
-  .about-section {
-    padding: 60px 20px;
+/* =============================== */
+/* 💻 Smaller desktops / laptops */
+/* =============================== */
+@media screen and (max-width: 1152px) {
+  .blog-hero {
+    height: 75vh;
   }
 
-  .about-text h2 {
-    font-size: 26px;
-  }
-
-  .about-text p {
-    font-size: 14px;
-  }
-
-  .about-image img {
-    max-width: 300px;
+  .blog-hero h1 {
+    font-size: 2.6rem;
   }
 }
 
-/* Mobile S (small phones, ~320–374px) */
-@media (max-width: 375px) {
-  .about-section {
-    padding: 50px 15px;
+/* =============================== */
+/* 🖥 Large desktops (1440px) */
+/* =============================== */
+@media screen and (max-width: 1440px) {
+  .blog-hero {
+    height: 80vh;
   }
 
-  .about-text h2 {
-    font-size: 24px;
+  .blog-hero .blog-content {
+    margin-left: 8%;
   }
 
-  .about-text p {
-    font-size: 13px;
-  }
-
-  .about-image img {
-    max-width: 270px;
+  .blog-hero h1 {
+    font-size: 2.8rem;
   }
 }
 
+/* ===================================== */
 
-/* Mission Vission Section  */
+.articles-section {
+  background-color: #f9f9f9; /* Light background to make white cards pop */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 5px;
+}
 
-.mission-vision-container {
-  max-width: 1600px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 30px 20px;
+/* Container Layout */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* Card Styling */
+.card {
+  background-color: #fff; /* Theme: White */
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(17, 17, 17, 0.08);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eaeaea;
+}
+
+/* Header Styling (Red Theme applied here) */
+.card-header {
+  background-color: #d01313; /* Theme: Red */
+  color: #fff; /* Theme: White */
+  padding: 30px;
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-bottom: auto;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  z-index: 10;
+  transform: translateY(-10px);
+}
+
+.company-logo-img {
+  height: 40px; /* Adjust this height based on your specific logo's proportions */
+  width: auto;
+  object-fit: contain;
+  display: block;
+  gap: 5px;
   margin-bottom: 30px;
 }
 
-
-.subtitle {
-  color: #000 ;
-  
-  font-size:40px;
-}
-
-
-.content {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 40px 0px;
-  align-items: stretch;
-}
-
-.card {
-  flex: 1 1 300px;
-  border-radius: 20px;
-  padding: 30px;
-  min-height: 350px;
-}
-
-.vision {
-  background-color: #8B1C13 ;
-  text-align: left;
-}
-
-.mission {
-  background-color: #8B1C13 ;
-  text-align: left;
-}
-
-.image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px;
-}
-
-.card h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.card h2 i {
-  font-size: 28px;
-  color: #ffd6d6; /* soft contrast */
-}
-
-
-.card p {
-  font-size: 18px;
-  line-height: 1.5;
-  color: #e4e4e4;
- 
-}
-
-    @media (max-width: 1024px) {
-      .subtitle {
-        font-size: 36px;
-      }
-
-      .card h2 {
-        font-size: 28px;
-      }
-
-      .card p {
-        font-size: 16px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .content {
-        flex-direction: column;
-      }
-
-      .card {
-        width: 100%;
-        margin-bottom: 20px;
-        min-height: auto;
-      }
-      .card.image {
-        display: none;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .subtitle {
-        font-size: 28px;
-      }
-
-      .card h2 {
-        font-size: 24px;
-      }
-
-      .card p {
-        font-size: 15px;
-      }
-
-      .card {
-        padding: 20px;
-      }
-    }
-
-    @media (max-width: 360px) {
-      .subtitle {
-        font-size: 24px;
-      }
-
-      .card h2 {
-        font-size: 20px;
-      }
-
-      .card p {
-        font-size: 14px;
-      }
-    }
-
-/* Highlight active link in navbar */
-.nav-links .active-link {
-  color: #e07b17;
-}
-/* ABOUT PAGE CTA SECTION */
-.about-cta {
+.card-header h2 {
+  font-size: 1.8em;
+  line-height: 1.3;
+  max-width: 50%; /* Keeps text from overlapping the image */
   position: relative;
-  min-height: 55vh;
-  padding: 70px 24px;
-  background: url('images/cta.jpeg') no-repeat center center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-  border-radius: 0; /* optional if you want full width */
+  z-index: 2;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transform: translateY(-10px);
 }
 
-/* Blurred overlay */
-.about-cta::before {
-  content: "";
+/* Specific layout adjustments to match the second image's text alignment */
+.header-content-right {
+  text-align: left;
+  align-self: flex-start;
+  max-width: 48%;
+  position: relative;
+  z-index: 2;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transform: translateY(-10px);
+}
+
+.header-content-right h2 {
+  max-width: 100%;
+  font-size: 1.7em;
+  line-height: 1.3;
+}
+
+.card-header .sub-heading {
+  margin-top: 15px;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Decorative Background Shapes */
+.card-header::before {
+  content: '';
   position: absolute;
-  inset: 0;
-  backdrop-filter: blur(6px);
-  background: rgba(0, 0, 0, 0.45);
+  bottom: -40px;
+  left: -20px;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50% 50% 50% 0;
   z-index: 1;
 }
 
-.cta-content {
-  position: relative;
-  z-index: 2;
-  color: white;
-  max-width: 700px;
-  padding: 0 20px;
+/* Image Wrappers & Masks */
+.header-image-wrapper {
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.shape-circle {
+  position: absolute;
+  right: 20px;
+  top: 50%; /* Automatically finds the vertical center */
+  transform: translateY(-40%); /* Perfectly centers it regardless of text height */
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+
+.shape-blob {
+  position: absolute;
+  left: 20px;
+  top: 85px; /* Pushed down exactly enough to clear the VFix logo */
+  width: 220px;
+  height: 160px;
+  border-radius: 40px 10px 40px 10px;
+  border: 5px solid #fff;
+}
+
+.header-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bottom Body Styling */
+.card-body {
+  padding: 30px;
+  color: #111; /* Theme: Dark text */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;
 }
 
-.cta-content h2 {
-  font-size: 42px;
-  font-weight: 700;
-  margin: 0;
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+.card-body h3 {
+  font-size: 1.25em;
+  margin-bottom: 15px;
+  color: #111;
 }
 
-.cta-content p {
-  font-size: 18px;
-  margin: 0;
+.card-body p {
+  font-size: 0.95em;
   line-height: 1.6;
-  color: #f1f1f1;
+  color: #111; 
+  opacity: 0.85; /* Slight opacity for visual hierarchy, remains #111 based */
+  margin-bottom: 25px;
+  flex-grow: 1;
 }
 
-.about-cta .btn-primary {
-  background: #a00000;
-  color: white;
-  border: none;
-  padding: 14px 40px;
-  border-radius: 30px;
-  font-size: 17px;
-  cursor: pointer;
-  transition: 0.3s ease;
+/* Links / Buttons */
+.read-more {
+  text-decoration: none;
+  color: #d01313; /* Theme: Red */
+  font-weight: 700;
+  font-size: 1em;
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.about-cta .btn-primary:hover {
-  background: #c00000;
-  transform: translateY(-2px);
+.read-more:hover {
+  opacity: 0.8;
+  transform: translateX(3px); /* Subtle interaction */
 }
 
-/* ---------- RESPONSIVENESS ---------- */
-
-/* Extra small devices (phones, portrait) */
-@media (max-width: 320px) {
-  .about-cta {
-    min-height: 72vh;
-    padding: 50px 16px;
-  }
-
-  .cta-content {
-    gap: 16px;
-  }
-
-  .cta-content h2 {
-    font-size: 22px;
-  }
-
-  .cta-content p {
-    font-size: 13px;
-  }
-
-  .about-cta .btn-primary {
-    padding: 10px 24px;
-    font-size: 14px;
-  }
-}
-
-/* Small devices (phones) */
-@media (max-width: 480px) {
-  .about-cta {
-    min-height: 70vh;
-    padding: 60px 18px;
-  }
-
-  .cta-content {
-    gap: 16px;
-  }
-
-  .cta-content h2 {
-    font-size: 26px;
-  }
-
-  .cta-content p {
-    font-size: 14px;
-  }
-
-  .about-cta .btn-primary {
-    padding: 12px 28px;
-    font-size: 15px;
-  }
-}
-
-/* Medium devices (phones) */
-@media (max-width: 576px) {
-  .cta-content {
-    max-width: 90%;
-  }
-
-  .cta-content h2 {
-    font-size: 28px;
-  }
-
-  .cta-content p {
-    font-size: 15px;
-  }
-}
-
-/* Large phones (latest iPhones, Androids) */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .about-cta {
-    min-height: 65vh;
-    padding: 65px 20px;
+  .card-header h2 {
+    max-width: 100%;
+    font-size: 1.1em;
+    margin-bottom: 120px; /* Make room for image to drop below text */
   }
-
-  .cta-content {
-    gap: 18px;
+  .header-content-right {
+    text-align: left;
+    align-self: flex-start;
   }
-
-  .cta-content h2 {
-    font-size: 32px;
-  }
-
-  .cta-content p {
-    font-size: 16px;
-  }
-}
-
-/* Tablets (portrait + landscape) */
-@media (max-width: 992px) {
-  .about-cta {
-    min-height: 55vh;
-  }
-
-  .cta-content h2 {
-    font-size: 36px;
-  }
-
-  .cta-content p {
-    font-size: 17px;
+  .shape-circle, .shape-blob {
+    right: 20px;
+    left: auto;
+    top: auto;
+    bottom: -20px;
   }
 }
 
-/* Small desktop */
-@media screen and (max-width: 1152px) {
-  .cta-content {
-    padding: 0 30px;
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .card-header {
+    min-height: 380px; /* Give the card a bit more breathing room on mobile */
+    padding: 25px 20px;
+  }
+
+  /* 1. Let the text take full width and align left for easier reading */
+  .card-header > h2, 
+  .header-content-right {
+    max-width: 100%;
+    text-align: left;
+    align-self: flex-start;
+    font-size: 1.5em; /* Slightly smaller font for mobile */
+    margin-bottom: auto; /* Pushes the image down */
+    z-index: 5; /* Ensures text stays perfectly on top */
+    text-shadow: 0 2px 8px rgba(208, 19, 19, 0.8); /* Adds a subtle glow so text is readable even if it touches the image edge */
+  }
+
+  .header-content-right h2 {
+    font-size: 1.1 em;
+  }
+
+  /* 2. Shrink the Circle and push it to the bottom right */
+  .shape-circle {
+    position: absolute;
+    top: auto;
+    left: auto;
+    transform: none;
+    bottom: -30px;
+    right: -30px;
+    width: 180px; /* Shrunk from 220px */
+    height: 180px;
+    z-index: 1;
+    opacity: 0.9;
+  }
+
+  /* 3. Shrink the Blob and push it to the bottom right */
+  .shape-blob {
+    position: absolute;
+    top: auto;
+    left: auto;
+    transform: none;
+    bottom: -30px;
+    right: -30px;
+    width: 180px; /* Shrunk from 220px */
+    height: 180px;
+    z-index: 1;
+    opacity: 0.9;
+  }
+  
+  /* 4. Fix logo spacing on mobile */
+  .logo {
+    margin-bottom: 20px;
   }
 }
 
-/* Large desktop */
-@media screen and (max-width: 1440px) {
-  .cta-content h2 {
-    font-size: 38px;
-  }
-}
-
-
+/* ===================================== */
 /* FOOTER */
 
 footer {
@@ -1273,8 +1102,6 @@ footer {
     height: 40px;
   }
 }
-
-
 
 /* =======================================================
    🔧 UNIVERSAL FIX: Remove unwanted horizontal scrollbars

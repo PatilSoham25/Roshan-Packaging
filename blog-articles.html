@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Roshan Packaging</title>
+  <link rel="icon" type="image/x-icon" href="videos/logo.jpg">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&family=Saira:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="blog-articles.css">
+  <!-- Correct Font Awesome CDN -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand">
+        <img src="videos/logo.jpg" alt="Roshan Packaging Logo" class="brand-logo">
+        <span class="brand-text">Roshan Packaging</span>
+      </a>
+
+      <!-- Hamburger Icon (Mobile Only) -->
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+          <a href="products.html" class="dropdown-toggle" id="productToggle">Product <i
+              class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+
+
+            <li class="sub-dropdown">
+              <a href="products.html?category=tesa">Tesa Tape ▸</a>
+
+              <ul class="sub-menu">
+                <li><a href="product-detail.html?id=35">Tesa 2410 BOPP</a></li>
+                <li><a href="product-detail.html?id=36">Tesa 4657 00-01</a></li>
+                <li><a href="product-detail.html?id=37">Tesa 4848</a></li>
+                <li><a href="product-detail.html?id=38">Tesa 4952 MMT</a></li>
+                <li><a href="product-detail.html?id=39">Tesa 4965</a></li>
+                <li><a href="product-detail.html?id=40">Tesa 4968</a></li>
+                <li><a href="product-detail.html?id=41">Tesa 7044 ACX</a></li>
+                <li><a href="product-detail.html?id=42">Tesa 7062 ACX</a></li>
+                <li><a href="product-detail.html?id=43">Tesa 50551</a></li>
+                <li><a href="product-detail.html?id=44">Tesa 51025</a></li>
+                <li><a href="product-detail.html?id=45">Tesa 51036</a></li>
+              </ul>
+            </li>
+            
+            <li class="sub-dropdown">
+              <a href="products.html?category=double">Double-Sided Tape ▸</a>
+              <ul class="sub-menu">
+                <li class="sub-sub-dropdown">
+                  <a href="#">AFT (Acrylic Foam Tape) ▸</a>
+                  <ul class="sub-sub-menu">
+                    <li data-subfilter="aft-clear"><a href="product-detail.html?id=14">Clear</a></li>
+                    <li data-subfilter="aft-grey"><a href="product-detail.html?id=15">Grey</a></li>
+                  </ul>
+                </li>
+
+                <li class="sub-sub-dropdown">
+                  <a href="#">Foam Tape ▸</a>
+                  <ul class="sub-sub-menu">
+                    <li data-subfilter="foam-blue-black"><a href="product-detail.html?id=16">Blue Black</a></li>
+                    <li data-subfilter="foam-green-black"><a href="product-detail.html?id=17">Green Black</a></li>
+                    <li data-subfilter="foam-mirror-mount"><a href="product-detail.html?id=18">Mirror Mount Tape</a>
+                    </li>
+                    <li data-subfilter="foam-red-black"><a href="product-detail.html?id=19">Red Black</a></li>
+                    <li data-subfilter="foam-yellow-white"><a href="product-detail.html?id=20">Yellow White</a></li>
+                  </ul>
+                </li>
+
+                <li data-subfilter="red-pet"><a href="product-detail.html?id=21">Red Pet Tape</a></li>
+                <li data-subfilter="tissue"><a href="product-detail.html?id=22">Tissue Tape</a></li>
+                <li data-subfilter="transfer"><a href="product-detail.html?id=23">Transfer Tape</a></li>
+              </ul>
+            </li>
+
+            <li class="sub-dropdown">
+              <a href="products.html?category=packaging">Packaging Tape ▸</a>
+              <ul class="sub-menu">
+                <li data-subfilter="aluminium-foil"><a href="product-detail.html?id=7">Aluminium Foil</a></li>
+                <li class="sub-sub-dropdown">
+                  <a href="#">BOPP ▸</a>
+                  <ul class="sub-sub-menu">
+                    <li data-subfilter="bopp-transparent"><a href="product-detail.html?id=1">Transparent</a></li>
+                    <li data-subfilter="bopp-brown"><a href="product-detail.html?id=2">Brown</a></li>
+                    <li data-subfilter="bopp-hotmelt"><a href="product-detail.html?id=3">Hot Melt</a></li>
+                    <li data-subfilter="bopp-milky"><a href="product-detail.html?id=4">Milky</a></li>
+                    <li data-subfilter="bopp-printed"><a href="product-detail.html?id=5">Printed</a></li>
+                    <li data-subfilter="bopp-rubber"><a href="product-detail.html?id=6">Rubber Based</a></li>
+                  </ul>
+                </li>
+                <li data-subfilter="cross-filament"><a href="product-detail.html?id=9">Cross Filament</a></li>
+                <li data-subfilter="duct-tape"><a href="product-detail.html?id=8">Duct Tape</a></li>
+                <li data-subfilter="monofilament"><a href="product-detail.html?id=10">Monofilament</a></li>
+                <li data-subfilter="paper-reinforced"><a href="product-detail.html?id=11">Paper Reinforced</a></li>
+                <li data-subfilter="pharmacell"><a href="product-detail.html?id=12">Permacel P-254</a></li>
+                <li data-subfilter="security"><a href="product-detail.html?id=13">Security</a></li>
+              </ul>
+            </li>
+
+            <li class="sub-dropdown">
+              <a href="products.html?category=insulation">Insulation Tape ▸</a>
+              <ul class="sub-menu">
+                <li data-subfilter="blue-tct"><a href="product-detail.html?id=24">Blue TCT</a></li>
+                <li data-subfilter="kapton"><a href="product-detail.html?id=25">Kapton</a></li>
+                <li data-subfilter="nitto-923s"><a href="product-detail.html?id=26">Nitto 923S</a></li>
+                <li data-subfilter="pvc"><a href="product-detail.html?id=27">PVC</a></li>
+                <li data-subfilter="self-amalgamating"><a href="product-detail.html?id=28">Self-Amalgamating Tape</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="sub-dropdown">
+              <a href="products.html?category=protection">Protection Tape ▸</a>
+              <ul class="sub-menu">
+                <li><a href="product-detail.html?id=29">SPT Blue</a></li>
+                <li><a href="product-detail.html?id=30">SPT BW</a></li>
+                <li><a href="product-detail.html?id=31">SPT TR</a></li>
+              </ul>
+            </li>
+
+            <li class="sub-dropdown">
+              <a href="products.html?category=safety">Safety Tape ▸</a>
+              <ul class="sub-menu">
+                <li><a href="product-detail.html?id=32">Anti-Skit</a></li>
+                <li><a href="product-detail.html?id=33">Floor Marking</a></li>
+                <li><a href="product-detail.html?id=34">Security</a></li>
+              </ul>
+            </li>
+          </ul>
+
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Search Bar -->
+      <div class="nav-search">
+        <input type="text" placeholder="Search...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </nav>
+
+    <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        hamburger.classList.toggle('active');
+    });
+
+    const productToggle = document.getElementById('productToggle');
+    const dropdown = productToggle.parentElement;
+
+    // ONLY Product toggle should open dropdown in mobile
+    productToggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+        e.preventDefault();
+        dropdown.classList.toggle('open');
+        }
+    });
+
+    // ❌ DO NOT block category links
+    // So REMOVE this old preventDefault logic completely
+    </script>
+    <script>
+    function removeMobileArrows() {
+        if (window.innerWidth <= 768) {
+        document.querySelectorAll('.sub-dropdown > a').forEach(link => {
+            link.innerHTML = link.innerHTML.replace(' ▸', '');
+        });
+        }
+    }
+
+    // Run on load
+    removeMobileArrows();
+
+    // Run on resize (orientation change etc.)
+    window.addEventListener('resize', removeMobileArrows);
+    </script>
+    
+
+    <!-- The Article View (Hidden by default) -->
+
+    <section id="article-1" class="article-view-section">
+        <div class="article-container">
+        
+        <!-- Back Button linking back to the main blog page -->
+        <a href="blog.html" id="back-btn" class="back-btn" style="display: inline-block; text-decoration: none;">&larr; Back to Articles</a>
+        
+        <header class="article-header">
+            <h1>Best Tesa Tapes for Automotive Wire Harness Wrapping</h1>
+        </header>
+
+        <div class="article-content">
+            <p>In modern vehicles, wire harnesses are exposed to heat, vibration, abrasion, chemicals, and constant movement. The right harness tape is essential for protecting cables, reducing noise, improving durability, and meeting OEM standards.</p>
+            <p>Tesa, a globally trusted German adhesive solutions brand, offers specialized automotive tapes designed specifically for wire harness wrapping. At Roshan Packaging, we supply genuine Tesa tapes used by automotive OEMs, EV manufacturers, and wire harness suppliers across India.</p>
+
+            <hr>
+
+            <h2>Why Wire Harness Wrapping Matters</h2>
+            <p>Automotive wire harness tapes do much more than bundle wires together. They help:</p>
+            <ul>
+            <li><strong>Protect against abrasion:</strong> Prevent wires from wearing out due to vibration and movement.</li>
+            <li><strong>Reduce noise and vibration (NVH):</strong> Minimize rattling sounds inside the vehicle cabin.</li>
+            <li><strong>Resist heat and chemicals:</strong> Maintain performance in engine bays and harsh environments.</li>
+            <li><strong>Improve organization and routing:</strong> Keep harnesses neat, secure, and easier to install.</li>
+            <li><strong>Ensure long-term reliability:</strong> Support consistent electrical performance throughout the vehicle lifecycle.</li>
+            </ul>
+
+            <hr>
+
+            <h2>Top Tesa Tapes for Automotive Wire Harnesses</h2>
+            <div class="table-responsive">
+            <table class="custom-table">
+                <thead>
+                <tr>
+                    <th>Tesa Tape</th>
+                    <th>Material</th>
+                    <th>Temperature Resistance</th>
+                    <th>Best Application</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><strong>Tesa 51036</strong></td>
+                    <td>PET cloth</td>
+                    <td>Up to 125°C</td>
+                    <td>Engine compartment harnesses</td>
+                </tr>
+                <tr>
+                    <td><strong>Tesa 51608</strong></td>
+                    <td>Fleece</td>
+                    <td>Up to 105°C</td>
+                    <td>Interior and cabin harnesses</td>
+                </tr>
+                <tr>
+                    <td><strong>Tesa 51618</strong></td>
+                    <td>Premium fleece</td>
+                    <td>Up to 125°C</td>
+                    <td>Premium interior applications</td>
+                </tr>
+                <tr>
+                    <td><strong>Tesa 51026</strong></td>
+                    <td>PET cloth</td>
+                    <td>Up to 105°C</td>
+                    <td>General harness wrapping</td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <hr>
+
+            <h2>How to Select the Right Tesa Harness Tape</h2>
+            <p>When choosing a wire harness tape, consider these factors:</p>
+            <ul>
+            <li><strong>Operating temperature:</strong> Engine bay applications require higher heat resistance than interior applications.</li>
+            <li><strong>Abrasion exposure:</strong> Harnesses routed through tight spaces or moving areas need stronger abrasion protection.</li>
+            <li><strong>Noise reduction requirements:</strong> Interior harnesses benefit from fleece tapes that dampen vibration and rattling.</li>
+            <li><strong>OEM specifications:</strong> Many automotive manufacturers approve specific tape grades, so always verify the required standard.</li>
+            </ul>
+
+            <hr>
+
+            <h2>Where These Tapes Are Used</h2>
+            <p>Tesa automotive tapes are commonly used in:</p>
+            <ul class="inline-list">
+            <li>Passenger vehicles</li>
+            <li>Commercial vehicles</li>
+            <li>Electric vehicles (EVs)</li>
+            <li>Battery pack assemblies</li>
+            <li>Dashboard and door harnesses</li>
+            <li>Engine and under-hood wiring systems</li>
+            </ul>
+            <p><em>They are trusted across the automotive supply chain by OEMs, Tier-1 suppliers, and specialized wire harness manufacturers.</em></p>
+
+            <hr>
+
+            <h2>Conclusion</h2>
+            <p>Selecting the right wire harness tape is critical for vehicle reliability, durability, and passenger comfort. Whether you need heavy-duty abrasion protection, superior noise damping, or a cost-effective standard solution, Tesa offers a tape designed for the job.</p>
+            
+            <div class="category-grid" style="margin-top: 20px;">
+            <div class="category-card" style="border-left: 4px solid #d01313;">
+                <p><strong>Tesa 51036:</strong> Best for engine bay and high-abrasion applications</p>
+            </div>
+            <div class="category-card" style="border-left: 4px solid #d01313;">
+                <p><strong>Tesa 51608:</strong> Best for interior noise reduction</p>
+            </div>
+            <div class="category-card" style="border-left: 4px solid #d01313;">
+                <p><strong>Tesa 51618:</strong> Best premium NVH solution</p>
+            </div>
+            <div class="category-card" style="border-left: 4px solid #d01313;">
+                <p><strong>Tesa 51026:</strong> Best economical general-purpose option</p>
+            </div>
+            </div>
+
+            <p style="margin-top: 30px; font-weight: bold; color: #d01313;">For genuine Tesa automotive harness tapes and expert guidance, contact Roshan Packaging today.</p>
+
+        </div>
+        </div>
+    </section>
+
+  <section id="article-2" class="article-view-section hidden">
+    <div class="article-container">
+      
+      <!-- Changed from a <button> to an <a> tag linking back to blog.html -->
+      <a href="blog.html" id="back-btn" class="back-btn" style="display: inline-block; text-decoration: none;">&larr; Back to Articles</a>
+      
+      <header class="article-header">
+        <h1>Tesa Tape Selection Guide for Industrial Applications: How to Choose the Right Adhesive Tape</h1>
+      </header>
+
+      <div class="article-content">
+        <h2>Introduction</h2>
+        <p>Industrial adhesive tapes have become an essential component in modern manufacturing, replacing traditional fastening methods such as screws, rivets, and welding in many applications. Whether you are involved in automotive production, electronics assembly, white goods manufacturing, printing, packaging, or solar panel production, selecting the right adhesive tape is critical for product performance and manufacturing efficiency.</p>
+        <p>This guide explains the key factors to consider when selecting a Tesa tape for industrial applications and helps engineers, production managers, and procurement teams make informed decisions.</p>
+
+        <hr>
+
+        <h2>Why Proper Tape Selection Matters</h2>
+        <div class="comparison-grid">
+          <div class="bad-outcomes">
+            <h3>Selecting the wrong tape can lead to:</h3>
+            <ul>
+              <li>Bond failure</li>
+              <li>Increased maintenance costs</li>
+              <li>Production downtime</li>
+              <li>Quality issues</li>
+              <li>Reduced product lifespan</li>
+            </ul>
+          </div>
+          <div class="good-outcomes">
+            <h3>A properly selected adhesive tape can:</h3>
+            <ul>
+              <li>Improve production efficiency</li>
+              <li>Reduce assembly time</li>
+              <li>Enhance product aesthetics</li>
+              <li>Lower manufacturing costs</li>
+              <li>Increase durability and reliability</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr>
+
+        <h2>Key Factors to Consider When Selecting a Tesa Tape</h2>
+        
+        <h3>1. Surface Material</h3>
+        <p>Different substrates require different adhesive technologies. Common industrial surfaces include:</p>
+        <ul class="inline-list">
+          <li>Steel</li>
+          <li>Aluminium</li>
+          <li>Powder-coated metals</li>
+          <li>Plastics</li>
+          <li>Glass</li>
+          <li>Painted surfaces</li>
+          <li>Composite materials</li>
+        </ul>
+        <p><em>Note: For low-surface-energy plastics, specialized adhesive systems are often required to achieve reliable bonding performance.</em></p>
+
+        <h3>2. Application Requirements</h3>
+        <p>Before selecting a tape, determine whether the application requires:</p>
+        <ul class="inline-list">
+          <li>Permanent bonding</li>
+          <li>Temporary fixing</li>
+          <li>Surface protection</li>
+          <li>Wire harness wrapping</li>
+          <li>Noise reduction</li>
+          <li>Electrical insulation</li>
+          <li>Sealing</li>
+          <li>Mounting</li>
+        </ul>
+        <p>Understanding the application helps narrow down the most suitable tape category.</p>
+
+        <h3>3. Environmental Conditions</h3>
+        <p>Industrial applications often expose adhesive tapes to:</p>
+        <ul class="inline-list">
+          <li>High temperatures</li>
+          <li>UV radiation</li>
+          <li>Moisture</li>
+          <li>Chemicals</li>
+          <li>Dust</li>
+          <li>Vibration</li>
+        </ul>
+        <p>For outdoor or harsh environments, acrylic-based adhesive tapes generally provide superior durability and weather resistance.</p>
+
+        <h3>4. Load and Stress Requirements</h3>
+        <p>Consider static loads, dynamic loads, shock loads, and vibration exposure. Applications such as automotive trim mounting, appliance assembly, and industrial signage often require high-strength bonding solutions capable of handling long-term stress.</p>
+
+        <hr>
+
+        <h2>Tesa Tape Categories and Their Applications</h2>
+        
+        <div class="category-grid">
+          <div class="category-card">
+            <h4>Double-Sided Tapes</h4>
+            <p><strong>Applications:</strong> Trim attachment, decorative panel bonding, appliance assembly, signage installation, plastic component mounting.</p>
+            <p><strong>Industries:</strong> Automotive, White Goods, Electronics, Signage.</p>
+          </div>
+          <div class="category-card">
+            <h4>Acrylic Foam Tapes</h4>
+            <p><strong>Suitable for:</strong> Exterior automotive components, metal panel bonding, high-strength structural bonding.</p>
+            <p><strong>Benefits:</strong> Excellent weather resistance, vibration damping, long-term durability.</p>
+          </div>
+          <div class="category-card">
+            <h4>Wire Harness Tapes</h4>
+            <p><strong>Applications:</strong> Cable bundling, noise reduction, abrasion protection.</p>
+            <p><strong>Industries:</strong> Automotive, Electrical, Electronics.</p>
+          </div>
+          <div class="category-card">
+            <h4>Surface Protection Tapes</h4>
+            <p><strong>Applications:</strong> Stainless steel protection, glass protection, painted surface protection.</p>
+            <p><strong>Industries:</strong> Construction, Automotive, White Goods.</p>
+          </div>
+          <div class="category-card">
+            <h4>Electrical and Insulation Tapes</h4>
+            <p><strong>Applications:</strong> Electrical insulation, component protection, cable management.</p>
+            <p><strong>Industries:</strong> Electronics, Electrical Manufacturing, Renewable Energy.</p>
+          </div>
+        </div>
+
+        <hr>
+
+        <h2>Industry-Wise Tape Selection Guide</h2>
+        <ul>
+          <li><strong>Automotive Industry:</strong> Requires heat resistance, abrasion resistance, noise reduction, and high bonding strength. Used in wire harnesses, interior trim, exterior emblems, and EV battery systems.</li>
+          <li><strong>Electronics Industry:</strong> Requires thermal management, electrical insulation, and EMI shielding. Used in PCB assembly, device mounting, and component protection.</li>
+          <li><strong>White Goods Industry:</strong> Requires strong bonding, moisture resistance, and long service life. Used in refrigerators, washing machines, and air conditioners.</li>
+          <li><strong>Printing and Packaging Industry:</strong> Requires precise adhesion, easy removal, and consistent performance. Used in plate mounting, splicing, and packaging.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Common Mistakes When Selecting Industrial Tapes</h2>
+        <ul>
+          <li>Ignoring surface characteristics.</li>
+          <li>Overlooking environmental exposure.</li>
+          <li>Choosing tape solely based on cost.</li>
+          <li>Failing to test under actual operating conditions.</li>
+          <li>Using general-purpose tapes for specialized applications.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Conclusion</h2>
+        <p>Selecting the right industrial adhesive tape requires careful consideration of substrate type, environmental conditions, performance requirements, and industry-specific applications. By evaluating these factors, manufacturers can improve product quality, increase production efficiency, and reduce long-term costs. Whether your application involves automotive manufacturing, electronics assembly, packaging, white goods production, or industrial fabrication, choosing the appropriate Tesa tape solution can significantly enhance overall performance and reliability.</p>
+
+        <hr>
+
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        <div class="faq-section">
+          <h4>1. How do I choose the right Tesa tape for my industrial application?</h4>
+          <p>The right Tesa tape depends on factors such as substrate material, operating temperature, environmental conditions, bond strength requirements, and whether the application is temporary or permanent. Proper evaluation ensures long-term performance and reliability.</p>
+
+          <h4>2. Can Tesa tapes replace screws, rivets, and welding?</h4>
+          <p>Yes. Many high-performance Tesa tapes are designed to replace traditional fastening methods in applications such as panel bonding, trim attachment, appliance assembly, and signage installation, offering cleaner aesthetics and faster assembly.</p>
+
+          <h4>3. Which industries commonly use Tesa industrial tapes?</h4>
+          <p>Tesa tapes are widely used in automotive, electronics, white goods, LED lighting, paper, printing, packaging, solar, HVAC, and construction industries for bonding, mounting, insulation, protection, and splicing applications.</p>
+
+          <h4>4. Are Tesa tapes suitable for outdoor and high-temperature applications?</h4>
+          <p>Yes. Many Tesa acrylic and specialty tapes provide excellent resistance to UV exposure, moisture, temperature fluctuations, and harsh environmental conditions, making them suitable for demanding industrial applications.</p>
+
+          <h4>5. Why is surface preparation important before applying adhesive tape?</h4>
+          <p>A clean, dry, and contaminant-free surface is essential for achieving maximum adhesion. Proper surface preparation improves bond strength, durability, and overall tape performance while reducing the risk of bond failure.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+   document.addEventListener('DOMContentLoaded', () => {
+        // 1. Grab all the sections and buttons we need to control
+        const cardsSection = document.querySelector('.articles-section');
+        const articleView = document.getElementById('article-view');
+        const backBtn = document.getElementById('back-btn');
+        const readMoreLinks = document.querySelectorAll('.read-more');
+
+        // 2. What happens when you click "Read Article"
+        readMoreLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+            e.preventDefault(); // Stops the page from refreshing
+            
+            // Hide the cards, show the article
+            cardsSection.classList.add('hidden');
+            articleView.classList.remove('hidden');
+            
+            // Scroll smoothly to the top of the article
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+
+        // 3. What happens when you click "Back to Articles"
+        backBtn.addEventListener('click', () => {
+            
+            // Hide the article, show the cards
+            articleView.classList.add('hidden');
+            cardsSection.classList.remove('hidden');
+            
+            // Scroll smoothly back to the top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+        // Hide all articles first
+        document.querySelectorAll('.article-view-section').forEach(section => {
+        section.style.display = 'none';
+        });
+
+        // Get the ID from the URL (e.g., ?id=article-2)
+        const urlParams = new URLSearchParams(window.location.search);
+        const targetId = urlParams.get('id');
+
+        // Show only the article that was clicked
+        if (targetId) {
+        document.getElementById(targetId).style.display = 'flex';
+        } else {
+        // Default to article 1 if no link was used
+        document.getElementById('article-1').style.display = 'flex'; 
+        }
+    });
+  </script>
+
+
+
+    <!-- Footer  -->
+
+  <footer>
+    <div class="footer-content">
+
+      <!-- Column 1: Logo & Tagline -->
+      <div class="footer-logo">
+        <img src="videos/logo.jpg" alt="Roshan Packaging Logo" class="footer-brand-logo">
+        <p>Premium Adhesive Tapes for home and industrial use since 2000.</p>
+        <div class="footer-social">
+
+          <div class="social-pill-container">
+            <a href="#"><i data-feather="facebook"></i></a>
+            <a href="#"><i data-feather="twitter"></i></a>
+            <a href="#"><i data-feather="instagram"></i></a>
+            <a href="#"><i data-feather="linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Column 4: Products -->
+      <div class="footer-links">
+        <h4>Our Products</h4>
+        <ul>
+          <li><a href="products.html?category=tesa">Tesa Tape</a></li>
+          <li><a href="products.html?category=double">Double-Sided Tape</a></li>
+          <li><a href="products.html?category=insulation">Insulation Tape</a></li>
+          <li><a href="products.html?category=packaging">Packaging Tape</a></li>
+          <li><a href="products.html?category=protection">Protection Tape</a></li>
+          <li><a href="products.html?category=safety">Safety Tape</a></li>
+        </ul>
+      </div>
+      <!-- Column 3: Contact Info -->
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><strong>Address:</strong> G-20, Paresh Industrial Estate, Shankarsheth Road, Pune-411037, India</p>
+        <p><strong>Email:</strong> sales@roshanpackaging.com</p>
+        <p><strong>Phone:</strong> +91 9370099995 </p>
+        <p><strong>Phone:</strong> +91 7385190995</p>
+      </div>
+
+    </div>
+
+    <p class="footer-bottom">&copy; 2025 Roshan Packaging. All rights reserved. <br>Developed by <a class="footer-bottom" href="https://mindaxiss.com/">MindAxis Innovation Pvt Ltd</a>
+    </p>
+  </footer>
+
+
+
+
+  <a href="https://wa.me/7385190995" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" />
+  </a>
+  <script>
+    feather.replace();
+  </script>
+
+  <!-- Product Data and Search Scripts -->
+  <script src="product-data.js"></script>
+  <script src="search.js"></script>
+</body>
+
+</html>
